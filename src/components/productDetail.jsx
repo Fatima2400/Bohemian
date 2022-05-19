@@ -21,7 +21,7 @@ export const Details =()=>{
   
   useEffect(() => {
     getData()
-//     cartPost()
+    cartPost()
   },[])
 
   const getData=()=>{
@@ -71,7 +71,7 @@ axios.get(`https://bohemian1.herokuapp.com/arrivals/${id}`).then((res) =>{
             id:product.id,
             qty:1
         })
-        cartPost()
+      
 
         setcartBtn("Remove from cart")
     }else{
