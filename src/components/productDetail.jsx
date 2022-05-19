@@ -21,7 +21,7 @@ export const Details =()=>{
   
   useEffect(() => {
     getData()
-    cartPost()
+//     cartPost()
   },[])
 
   const getData=()=>{
