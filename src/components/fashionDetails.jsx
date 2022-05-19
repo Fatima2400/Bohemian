@@ -12,6 +12,7 @@ export const FashionDetails =()=>{
     const navigate = useNavigate();
     //const Cart = useSelector((state) => state.Cart);
     const product = useSelector((state) => state.product);
+    const[cartBtn,setcartBtn]=useState("Add To Cart")
     console.log(product)
     const {id} = useParams();
   
@@ -44,15 +45,23 @@ axios.get(`https://bohemian1.herokuapp.com/fashion/${id}`).then((res) =>{
  
   const handlecart=()=>{
     
-    axios.post('https://bohemian1.herokuapp.com/cartdata',{
-        title:product.title,
-        img:product.img,
-        price:product.price,
-        id:product.id,
-        qty:1
-    })
-navigate('/cart')
-// window.location.href="/cart"
+    if(cartBtn === 'Add To Cart'){
+        axios.post('http://bohemian1.herokuapp.com/cartdata',{
+            title:product.title,
+            img:product.img,
+            price:product.price,
+            id:product.id,
+            qty:1
+        })
+        
+
+        setcartBtn("Remove from cart")
+    }else{
+        axios.delete(`https://bohemian1.herokuapp.com/cartdata/${id}`)
+       
+           setcartBtn("Add To Cart")
+       }
+    
    
 
 
@@ -85,7 +94,7 @@ return (
 </select>
 
 
-<button onClick={()=>{handlecart()}} className="cartAdd">ADD TO CART</button>
+<button onClick={()=>{handlecart()}} className="cartAdd">{cartBtn}</button>
 </div>
 
    </div> 
