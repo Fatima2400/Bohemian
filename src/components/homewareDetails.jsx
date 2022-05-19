@@ -53,7 +53,8 @@ const handlecart=()=>{
             id:product.id,
             qty:1
         })
-   navigate('/cart')
+   //navigate('/cart')
+   window.location.href="/cart"
        
     
    

@@ -51,7 +51,8 @@ axios.get(`https://bohemian1.herokuapp.com/fashion/${id}`).then((res) =>{
         id:product.id,
         qty:1
     })
-navigate('/cart')
+//navigate('/cart')
+window.location.href="/cart"
    
 
 
