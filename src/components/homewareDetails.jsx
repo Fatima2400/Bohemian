@@ -14,6 +14,7 @@ export const HomeDetails =()=>{
     const navigate = useNavigate();
     const product = useSelector((state) => state.product);
     const Cart = useSelector((state) => state.Cart);
+    const[cartBtn,setcartBtn]=useState("Add To Cart")
     //console.log(product)
     const {id} = useParams();
  
@@ -46,6 +47,7 @@ axios.get(`https://bohemian1.herokuapp.com/homeware/${id}`).then((res) =>{
   //const [cart, setCart] =useState({})
 const handlecart=()=>{
     
+         if(cartBtn === 'Add To Cart'){
         axios.post('https://bohemian1.herokuapp.com/cartdata',{
             title:product.title,
             img:product.img,
@@ -53,8 +55,14 @@ const handlecart=()=>{
             id:product.id,
             qty:1
         })
-   navigate('/cart')
-  //  window.location.href="/cart"
+        
+
+        setcartBtn("Remove from cart")
+    }else{
+        axios.delete(`https://bohemian1.herokuapp.com/cartdata/${id}`)
+       
+           setcartBtn("Add To Cart")
+       }
        
     
    
@@ -80,7 +88,7 @@ return (
 <h5>₹{product.price}.00</h5>
 <p className="prodP">{product.description}</p> 
 
-<button onClick={()=>{handlecart()}} className="cartAdd">ADD TO CART</button>
+<button onClick={()=>{handlecart()}} className="cartAdd">{cartBtn}</button>
 </div>
 
    </div> 
