@@ -46,7 +46,7 @@ axios.get(`https://bohemian1.herokuapp.com/fashion/${id}`).then((res) =>{
   const handlecart=()=>{
     
     if(cartBtn === 'Add To Cart'){
-        axios.post('http://bohemian1.herokuapp.com/cartdata',{
+        axios.post('https://bohemian1.herokuapp.com/cartdata',{
             title:product.title,
             img:product.img,
             price:product.price,
