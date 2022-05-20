@@ -1,11 +1,11 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Smooch&display=swap');
 
 
 .navbar .navbar-brand{
   color: black;
     font-size: 23px;
-    font-family: Snell Roundhand, cursive;
-    font-weight: bold;
+    font-family: 'Sacramento', cursive;
+/*     font-weight: bold; */
 }
 
 .navbar .nav-link{
@@ -37,7 +37,7 @@ h4,h5{
 }
 
  .acchead{
-  font-family: Snell Roundhand, cursive;
+  font-family: 'Sacramento', cursive;
   text-align: center;
   font-weight: bold;
 }
