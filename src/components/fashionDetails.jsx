@@ -55,9 +55,9 @@ axios.get(`https://bohemian1.herokuapp.com/fashion/${id}`).then((res) =>{
         })
         
 
-        setcartBtn("Remove from cart")
+        setcartBtn("Added to Cart")
     }else{
-        axios.delete(`https://bohemian1.herokuapp.com/cartdata/${id}`)
+        //axios.delete(`https://bohemian1.herokuapp.com/cartdata/${id}`)
        
            setcartBtn("Add To Cart")
        }
@@ -70,7 +70,7 @@ axios.get(`https://bohemian1.herokuapp.com/fashion/${id}`).then((res) =>{
 return (
   
 
-   
+   <div>
    
  <div className='prdGrid'>
         
@@ -94,12 +94,35 @@ return (
 </select>
 
 
-<button onClick={()=>{handlecart()}} className="cartAdd">{cartBtn}</button>
+<button onClick={()=>{handlecart()}} className="cartAdd" data-bs-toggle="modal" data-bs-target="#thankyouModal" >{cartBtn}</button>
 </div>
 
    </div> 
 
+<div class="modal fade" id="thankyouModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">CONGRATULATIONS.</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              Item successfully added to cart
+         
+          </div>
+          <div class="modal-footer">
+            <button onClick={()=>{
+                navigate("/cart")
+            }}  type="button" data-bs-dismiss="modal" class="btn btn-primary bg-black">Go to cart</button>
+           
 
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+ </div> 
  
    
 )
