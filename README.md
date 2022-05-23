@@ -36,5 +36,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/m
 
 You can see the order summary and calculated Total price here.
 
-![Screenshot 2022-05-23 at 6 39 46 PM](https://user-images.githubusercontent.com/96168561/169826883-234baf1e-dff8-4bbf-912e-a3465ee1f27e.png)
+![Screenshot 2022-05-23 at 6 42 16 PM]
+
 
