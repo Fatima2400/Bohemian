@@ -322,11 +322,16 @@ margin: auto;
     
   }
   .cartImage{
-    height: 37%;
-    width: 37%
+    height: 60%;
+    width: 60%
   }
   .cartTitle{
     font-size: 60%;
+  }
+  .plus{
+    border: 1px solid black;
+    background-color: transparent;
+    border-radius: 20%;
   }
   
   
