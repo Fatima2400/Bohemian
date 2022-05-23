@@ -13,6 +13,7 @@ import Select from '@mui/material/Select';
 
 export const Arrival = () => {
     const [Method, setMethod]= useState('')
+    const [post , setPost] = useState(null)
   
     const handlecard=(event)=>{
         setMethod(event.target.value)
@@ -170,7 +171,7 @@ const handlecat=(category)=>{
 
 
             <div className="arr">
-                {
+                { post? <h2>"loading..."</h2> :
                     arrive.map((el) => {
                         return (
                             <Link style={{textDecoration:"none"}} className="dec"  to={`/detail/${el.id}`} key={el.id}>
@@ -188,7 +189,7 @@ const handlecat=(category)=>{
 </Link>
                        )
                     })
-                }
+                  }
 
             </div>
 
