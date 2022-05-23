@@ -9,21 +9,21 @@ Consisting three categories - Accessories, Fashion and Homeware.
 ![Screenshot 2022-05-23 at 6 24 14 PM](https://user-images.githubusercontent.com/96168561/169825394-7f9a2904-74b3-4cba-9e23-e743305a5c9b.png)
 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
 
 ## Fashion product listing-
 
 
 ![Screenshot 2022-05-23 at 6 25 53 PM](https://user-images.githubusercontent.com/96168561/169825639-65ae6630-5d86-492e-8a39-36ea7f71ebe8.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
 
 ## Homeware Product listing-
 
 
 ![Screenshot 2022-05-23 at 6 26 43 PM](https://user-images.githubusercontent.com/96168561/169825750-a430d5e7-a9a8-4a1c-9264-5d0d16380904.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
 
 ## Cart page-
 
