@@ -207,6 +207,10 @@ margin: auto;
       background-color: black;
       color: white;
     }
+    .cartImage{
+      height: 150px;
+      width: 230px;
+    }
 @media only screen and (min-width: 500px) and (max-width: 1100px) {
   .category, .arr {
     grid-template-columns: repeat(2, 1fr);
