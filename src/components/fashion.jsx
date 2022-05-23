@@ -15,6 +15,7 @@ import Select from '@mui/material/Select';
 
 export const Fashion = () => {
     const [Method, setMethod]= useState('')
+    const [post , setPost] = useState(null)
     const handlecard=(event)=>{
         setMethod(event.target.value)
 if(event.target.value==="High"){
@@ -59,6 +60,7 @@ fashion.sort((a,b)=> {
         axios.get('https://bohemian1.herokuapp.com/fashion').then((res)=>{
             dispatch(getProduct(res.data))
             console.log(res.data)
+            setPost(res.data)
              
         });
 
@@ -123,7 +125,7 @@ fashion.sort((a,b)=> {
 
 
 
-<div style={{width:"15%",height:"20px", marginBottom:"35px"}}>
+<div className="categ" style={{width:"15%",height:"20px", marginBottom:"35px"}}>
            <Box sx={{ minWidth: 120 }}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Sort by category</InputLabel>
@@ -165,7 +167,7 @@ fashion.sort((a,b)=> {
 
 
             <div className="arr">
-                {
+                { post? 
                     fashion.map((el) => {
                         return (
                             <Link style={{textDecoration:"none"}} className="dec"  to={`/fashiondetail/${el.id}`} key={el.id}>
@@ -183,7 +185,7 @@ fashion.sort((a,b)=> {
 </Link>
                        )
                     })
-                }
+               :<h4 className="load">loading...</h4>  }
 
             </div>
 

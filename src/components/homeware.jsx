@@ -16,6 +16,7 @@ import Select from '@mui/material/Select';
 
 export const Homeware = () => {
     const [Method, setMethod]= useState('')
+    const [post , setPost] = useState(null)
     const handlecard=(event)=>{
         setMethod(event.target.value)
 if(event.target.value==="High"){
@@ -56,6 +57,7 @@ homeware.sort((a,b)=> {
         axios.get('https://bohemian1.herokuapp.com/homeware').then((res)=>{
             dispatch(getProduct(res.data))
             console.log(res.data)
+            setPost(res.data)
              
         });
 
@@ -129,7 +131,7 @@ handlerate(e.target.value);
 
            
             <div className="arr">
-                {
+                { post? 
                     homeware.map((el) => {
                         return (
                             <Link style={{textDecoration:"none"}} className="dec"  to={`/homedetail/${el.id}`} key={el.id}>
@@ -147,7 +149,7 @@ handlerate(e.target.value);
 </Link>
                        )
                     })
-                }
+                : <h4 className="load">loading...</h4>  }
 
             </div>
 

@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import {faTrash} from "@fortawesome/free-solid-svg-icons"
 
 import { getCartData } from "../redux/action";
 import {  useNavigate } from "react-router";
@@ -91,13 +93,13 @@ var sum = 0
           return (
             <tr>
             
-            <td> <img height='150px' width='230px' src={el.img} alt="" /> <h6>{el.title}</h6></td>
+            <td> <img className="cartImage" height='150px' width='230px' src={el.img} alt="" /> <h6 className="cartTitle">{el.title}</h6></td>
             
             <td>₹{el.price}</td>
             
-            <td> <button onClick={()=>{
+            <td> <button className="plus" onClick={()=>{
                 increment(el)
-            }}>+</button> {el.qty}  <button onClick={()=>{
+            }}>+</button> {el.qty}  <button className="plus" onClick={()=>{
                 decrement(el)
             }} >-</button> 
             
@@ -106,7 +108,9 @@ var sum = 0
             <td>  
             <button onClick={() => {
                         deleteData(el.id)
-                    }} className="crt">remove item</button>
+                    }} className="crt"><FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
+                      </button>
+                      
             </td>
           </tr>
           )

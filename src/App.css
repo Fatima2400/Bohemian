@@ -185,6 +185,28 @@ width: 90%;
 /* border: 1px solid red; */
 margin: auto;
 }
+.load{
+  margin: auto;
+  margin-top: 3%;
+}
+.plus{
+  background-color: transparent;
+  border-radius: 20%;
+}
+
+.plus:hover{
+  background-color: black;
+  color: white;
+}
+.crt{
+  /* font-size: 60%; */
+  background-color: transparent;
+  border: transparent;
+    }
+    .crt:hover{
+      background-color: black;
+      color: white;
+    }
 @media only screen and (min-width: 500px) and (max-width: 1100px) {
   .category, .arr {
     grid-template-columns: repeat(2, 1fr);
@@ -247,8 +269,10 @@ margin: auto;
 
 @media only screen and (min-width: 0px) and (max-width: 500px) {
   .category, .arr {
+
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    margin-top: 5%;
   }
   .sortbtn{
     background-color: white;
@@ -293,5 +317,17 @@ margin: auto;
   grid-template-rows: repeat(2,1fr);
   row-gap: 10px;
   }
+  .categ{
+    margin-top: 4%;
+    
+  }
+  .cartImage{
+    height: 37%;
+    width: 37%
+  }
+  .cartTitle{
+    font-size: 60%;
+  }
+  
   
 }

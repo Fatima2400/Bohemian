@@ -64,6 +64,7 @@ const handlecat=(category)=>{
 
         axios.get('https://bohemian1.herokuapp.com/arrivals').then((res)=>{
             dispatch(getProduct(res.data))
+            setPost(res.data)
             console.log(res.data)
              
         });
@@ -125,7 +126,7 @@ const handlecat=(category)=>{
 
 
 
-<div style={{width:"15%",height:"20px", marginBottom:"35px"}}>
+<div className="categ" style={{width:"15%",height:"20px", marginBottom:"35px"}}>
            <Box sx={{ minWidth: 120 }}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Sort by category</InputLabel>
@@ -171,7 +172,7 @@ const handlecat=(category)=>{
 
 
             <div className="arr">
-                { post? <h2>"loading..."</h2> :
+                { post? 
                     arrive.map((el) => {
                         return (
                             <Link style={{textDecoration:"none"}} className="dec"  to={`/detail/${el.id}`} key={el.id}>
@@ -189,7 +190,7 @@ const handlecat=(category)=>{
 </Link>
                        )
                     })
-                  }
+                 :<h4 className="load">loading...</h4>  }
 
             </div>
 
