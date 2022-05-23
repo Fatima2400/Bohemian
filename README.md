@@ -31,3 +31,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/m
 ![Screenshot 2022-05-23 at 6 29 02 PM](https://user-images.githubusercontent.com/96168561/169825789-46e6bde5-1743-46dc-be58-5bb6e3adb15b.png)
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+## Checkout page
+
+You can see the order summary and calculated Total price here.
+
+![Screenshot 2022-05-23 at 6 39 46 PM](https://user-images.githubusercontent.com/96168561/169826883-234baf1e-dff8-4bbf-912e-a3465ee1f27e.png)
+
