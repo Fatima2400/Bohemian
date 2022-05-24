@@ -93,7 +93,7 @@ var sum = 0
           return (
             <tr>
             
-            <td> <img className="cartImage"  src={el.img} alt="" /> <h6 className="cartTitle">{el.title}</h6></td>
+            <td  className='col'> <img className="cartImage"  src={el.img} alt="" /> <h6 className="cartTitle">{el.title}</h6></td>
             
             <td>₹{el.price}</td>
             
