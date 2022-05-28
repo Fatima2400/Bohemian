@@ -1,6 +1,6 @@
 # E-COMMERCE WEBSITE 
 
-This is the final project of unit-6 of Masai School, where we had to make an e-commerce website consisting of the Landing page, Product listing page, Product detail page, Add to cart functionality, Cart page, etc.
+This is the final solo project of unit-6 of Masai School, where we had to make an e-commerce website consisting of the Landing page, Product listing page, Product detail page, Add to cart functionality, Cart page, etc.
 
 ##  The Landing page-
 
